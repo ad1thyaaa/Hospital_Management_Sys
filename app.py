@@ -156,11 +156,6 @@ class DoctorRequest(db.Model):
     status = db.Column(db.String(50), default="Pending")  # Default to 'Pending'
     profile_picture = db.Column(db.String(500), nullable=False)  # New field for profile picture path
     resume = db.Column(db.String(500), nullable=False)  # New field for resume path
-
-
-=======
-
-
 # # =======================
 # # Dummy Data
 # # =======================
@@ -229,11 +224,6 @@ def populate_db():
         LogginedAdmin(admin_id="admin002",status="Logged-out"),
         LogginedAdmin(admin_id="admin003",status="Logged-out"),
     )
-
-
-
-=======
-
 # Insert data into the database
     for doctor in doctors:
         db.session.add(doctor)
@@ -514,7 +504,6 @@ def admin_login():
 def view_doctor_requests():
     doctor_requests = DoctorRequest.query.filter_by(status='pending').all()  # Adjust this query as needed
     return render_template('Admin/view_doctor_requests.html', doctor_requests=doctor_requests)
-
 
 
 @app.route('/approve_doctor_request/<int:request_id>', methods=['GET'])
@@ -944,9 +933,3 @@ if __name__ == '__main__':
         if not (Doctor.query.first() or Patient.query.first() or Admin.query.first()):
             populate_db()
     app.run(debug=True)
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> master
