@@ -157,6 +157,10 @@ class DoctorRequest(db.Model):
     profile_picture = db.Column(db.String(500), nullable=False)  # New field for profile picture path
     resume = db.Column(db.String(500), nullable=False)  # New field for resume path
 
+
+=======
+
+
 # # =======================
 # # Dummy Data
 # # =======================
@@ -226,6 +230,9 @@ def populate_db():
         LogginedAdmin(admin_id="admin003",status="Logged-out"),
     )
 
+
+
+=======
 
 # Insert data into the database
     for doctor in doctors:
@@ -937,3 +944,9 @@ if __name__ == '__main__':
         if not (Doctor.query.first() or Patient.query.first() or Admin.query.first()):
             populate_db()
     app.run(debug=True)
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> master

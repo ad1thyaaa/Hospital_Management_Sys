@@ -1,5 +1,9 @@
+
 # Hospital_Management_Sys
 A Webapp or basically a Management system for a Hospital created with Flask and Python
+
+=======
+# Hospital Management System
 
 ## Project Description
 The Hospital Management System is a web-based application developed using Flask, HTML, CSS, and Bootstrap. The system incorporates Role-Based Access Control (RBAC) to ensure secure and efficient hospital operations. It provides distinct interfaces and functionalities for admins, doctors, and patients, showcasing creativity, problem-solving, and technical skills in designing secure user interfaces.
@@ -111,3 +115,8 @@ File Structure
 ├── app.py 
 ├── requirements.txt # Python dependencies 
 └── README.md # Documentation
+
+
+
+
+
