@@ -158,74 +158,7 @@ class DoctorRequest(db.Model):
     resume = db.Column(db.String(500), nullable=False)  # New field for resume path
 
 
-# # =======================
-# # Dummy Data
-# # =======================
-def populate_db():
-# Dummy data for doctors
-    doctors = [
-        Doctor(name="John Doe", specialization="Cardiologist", phone="1234567890",
-               email="johndoe@example.com", password=generate_password_hash("doc1",method='pbkdf2:sha256'),
-               room_no=101, profile_picture_path="uploads/johndoe.jpg",
-               resume_path="uploads/johndoe_resume.pdf", status="approved"),
-        Doctor(name="Jane Smith", specialization="Neurologist", phone="0987654321",
-               email="janesmith@example.com", password=generate_password_hash("doc2",method='pbkdf2:sha256'),
-               room_no=102, profile_picture_path="uploads/janesmith.jpg",
-               resume_path="uploads/janesmith_resume.pdf", status="approved"),
-        Doctor(name="John Paul", specialization="General Physician", phone="1234567891",
-               email="johnpaul@example.com", password=generate_password_hash("doc3",method='pbkdf2:sha256'),
-               room_no=103, profile_picture_path="uploads/johnpaul.jpg",
-               resume_path="uploads/johnpaul_resume.pdf", status="approved"),
-        Doctor(name="Jaime Smith", specialization="Surgeon", phone="0987654322",
-               email="jaimesmith@example.com", password=generate_password_hash("doc4",method='pbkdf2:sha256'),
-               room_no=104, profile_picture_path="uploads/jaimesmith.jpg",
-               resume_path="uploads/jaimesmith_resume.pdf", status="approved")
-    ]
 
-# Dummy data for patients
-    patients = [
-        Patient(name="Alice Johnson", age=30, gender="Female", weight=65, bloodgroup="O+",
-                phone="1234567890", address="123 Main St", email="alice@example.com",
-                password=generate_password_hash("patient1",method='pbkdf2:sha256'), doctor_id=1, problem="Heart issues",
-                bloodpressure="120/80"),
-        Patient(name="Bob Williams", age=40, gender="Male", weight=85, bloodgroup="B+",
-                phone="0987654321", address="456 Elm St", email="bob@example.com",
-                password=generate_password_hash("patient2",method='pbkdf2:sha256'), doctor_id=2, problem="Migraine",
-                bloodpressure="130/83"),
-        Patient(name="Alice Paulson", age=32, gender="Female", weight=65, bloodgroup="O+",
-                phone="1234567891", address="123 LA Street", email="paulson@example.com",
-                password=generate_password_hash("patient3",method='pbkdf2:sha256'), doctor_id=3, problem="General",
-                bloodpressure="125/80"),
-        Patient(name="Bob Williams", age=41, gender="Male", weight=85, bloodgroup="B+",
-                phone="0987654322", address="456 River St", email="willi@example.com",
-                password=generate_password_hash("patient4",method='pbkdf2:sha256'), doctor_id=4, problem="Surgery",
-                bloodpressure="127/84")
-    ]
-
-# Dummy data for admins
-    admins = [
-        Admin(admin_id="admin001", admin_password=generate_password_hash("admin1",method='pbkdf2:sha256')),
-        Admin(admin_id="admin002", admin_password=generate_password_hash("admin2",method='pbkdf2:sha256')),
-        Admin(admin_id="admin003", admin_password=generate_password_hash("admin3",method='pbkdf2:sha256'))
-    ]
-# Dummy data for DocUser and PatUser
-    Docusers = [
-        LogginedDoctor(doctor_id=1,status="Logged-out"),
-        LogginedDoctor(doctor_id=2,status="Logged-out"),
-        LogginedDoctor(doctor_id=3,status="Logged-out"),
-        LogginedDoctor(doctor_id=4,status="Logged-out"),
-    ]
-    Patusers = (
-        LogginedPatient(patient_id=1,status="Logged-out"),
-        LogginedPatient(patient_id=2,status="Logged-out"),
-        LogginedPatient(patient_id=3,status="Logged-out"),
-        LogginedPatient(patient_id=4,status="Logged-out"),
-    )
-    Adminusers = (
-        LogginedAdmin(admin_id="admin001",status="Logged-out"),
-        LogginedAdmin(admin_id="admin002",status="Logged-out"),
-        LogginedAdmin(admin_id="admin003",status="Logged-out"),
-    )
 
 # Insert data into the database
     for doctor in doctors:
