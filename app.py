@@ -937,6 +937,3 @@ if __name__ == '__main__':
         if not (Doctor.query.first() or Patient.query.first() or Admin.query.first()):
             populate_db()
     app.run(debug=True)
-
-
-
