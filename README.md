@@ -1,4 +1,4 @@
-# Hospital_Management_Sys
+# Apollo Hospitals
 A Webapp or basically a Management system for a Hospital created with Flask and Python
 
 ---
