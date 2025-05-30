@@ -94,6 +94,7 @@ This project evaluates the following skills:
 - Create and activate a virtual environment
 - Install dependencies
 - Initialize or reset the database (if facing any error in sqlite part)
+  
     - If running for the first time or to reset data, delete the existing instance/hospital.db file if present.
     - Then run:
         - python app.py
@@ -102,6 +103,7 @@ This project evaluates the following skills:
     - If you have Mysql server , you can configure it, set the server and make changes in the app.py file.
     - Theb run the app.py
 - Access the application:
+  
     - Open your browser at http://127.0.0.1:5000/.
 
 ---
