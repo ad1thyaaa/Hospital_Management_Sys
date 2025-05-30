@@ -84,6 +84,7 @@ This project evaluates the following skills:
 - Add multi-factor authentication for enhanced security.
 - Implement a logging system to track user actions by role.
 - Enhance analytics with interactive charts and graphs.
+- Implement Flask Migration for db file recovery
 
 ---
 
@@ -94,6 +95,8 @@ This project evaluates the following skills:
 - Install dependencies
 - Initialize or reset the database (if facing any error in sqlite part)
     - If running for the first time or to reset data, delete the existing instance/hospital.db file if present.
+    - ###OR
+        - If you have Mysql server , you can configure it, set the server and make changes in the app.py file.
     - Then run:
         - python app.py
         - This will recreate the database and start the Flask server.
