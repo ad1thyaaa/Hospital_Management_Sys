@@ -14,7 +14,7 @@ import numpy as np
 from datetime import date
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:1234@localhost/Hospital"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///hospital.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
